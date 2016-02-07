@@ -1,0 +1,189 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900);
+body {
+  font-size: 16px;
+  font-family: "Lato";
+  color: #1e1a1b; }
+
+h1 {
+  font-size: 4em;
+  font-weight: 900; }
+
+h2 {
+  font-size: 2.4em;
+  font-weight: 400; }
+
+b {
+  font-weight: 700; }
+
+a {
+  text-decoration: none;
+  color: #1e1a1b; }
+
+.pagewidth {
+  width: 100%; }
+
+.container {
+  width: 1000px;
+  max-width: 1300px;
+  border: 1.2em solid black;
+  /*background: red;*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  overflow: scroll; }
+
+div.wraper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  div.wraper .title {
+    height: 10em;
+    padding: 1.8em;
+    text-align: center;
+    border-bottom: 0.2em solid #1e1a1b; }
+    div.wraper .title p {
+      margin-top: 1em;
+      font-size: 1.2em; }
+  div.wraper .banner {
+    padding-top: 1em;
+    text-align: center;
+    height: 4em;
+    width: 100%;
+    background: #a1dfda; }
+    div.wraper .banner h2 {
+      font-weight: 700; }
+  div.wraper .education {
+    height: auto;
+    /*background: green;*/
+    border-bottom: 0.2em solid #1e1a1b; }
+    div.wraper .education .edus {
+      width: 100%;
+      /*height: 100%;*/
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap; }
+      div.wraper .education .edus .edu {
+        width: 100%;
+        /*height: 111px;*/
+        /*background: red;*/
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-justify-content: space-around;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        border-bottom: 1px dotted #1e1a1b; }
+        div.wraper .education .edus .edu p {
+          margin: 1em;
+          line-height: 2em;
+          margin-left: 2em; }
+        div.wraper .education .edus .edu div:first-child {
+          width: 60%;
+          height: 100%
+          /*background: yellow;*/ }
+        div.wraper .education .edus .edu div:last-child {
+          width: 30%;
+          /*background: orange;*/
+          text-align: right; }
+  div.wraper .personalSkill {
+    min-height: 40em;
+    /*background:tomato;*/
+    border-bottom: 0.2em solid #1e1a1b; }
+    div.wraper .personalSkill .contentWraper {
+      /*padding:3em;*/
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      wrap-flow: column wrap; }
+      div.wraper .personalSkill .contentWraper div {
+        width: 100%;
+        height: auto; }
+      div.wraper .personalSkill .contentWraper .skillList {
+        /*background: red;*/
+        text-align: right;
+        height: auto; }
+        div.wraper .personalSkill .contentWraper .skillList li {
+          height: 20px;
+          margin: 6px;
+          margin-top: 15px; }
+        div.wraper .personalSkill .contentWraper .skillList ul {
+          margin-right: 1em; }
+      div.wraper .personalSkill .contentWraper .skillSet li:first-child {
+        width: 110px;
+        text-align: left; }
+      div.wraper .personalSkill .contentWraper .skillSet li {
+        width: auto;
+        height: 20px;
+        display: inline-block; }
+      div.wraper .personalSkill .contentWraper .skillSet .skillBar {
+        width: 15vw;
+        height: 100%;
+        background: #818387;
+        position: relative;
+        margin-top: 10px; }
+        div.wraper .personalSkill .contentWraper .skillSet .skillBar div {
+          width: 80%;
+          height: 100%;
+          background: #a1dfda;
+          position: absolute; }
+      div.wraper .personalSkill .contentWraper .skillInfo {
+        /*background: green;*/
+        width: 100%;
+        height: 300px; }
+        div.wraper .personalSkill .contentWraper .skillInfo .infoFeed {
+          width: 80%;
+          min-height: 500px;
+          margin: 2em;
+          background: #a1dfda; }
+  div.wraper .workExperience {
+    height: 15em;
+    border-bottom: 0.2em solid #1e1a1b; }
+    div.wraper .workExperience div:not(.banner) {
+      width: 80%;
+      height: 80%;
+      margin: 2em;
+      margin-left: auto;
+      margin-right: auto; }
+      div.wraper .workExperience div:not(.banner) p {
+        margin-top: 1em; }
+      div.wraper .workExperience div:not(.banner) p:last-child {
+        color: #818387; }
+  div.wraper .personalInfo {
+    height: 4em; }
+    div.wraper .personalInfo div {
+      width: 80%;
+      height: auto;
+      margin-top: 2em;
+      /*background: red;*/
+      margin-left: auto;
+      margin-right: auto; }
+      div.wraper .personalInfo div ul {
+        text-align: center; }
+        div.wraper .personalInfo div ul li {
+          display: inline;
+          margin: 1em; }
+          div.wraper .personalInfo div ul li i {
+            -webkit-transform: scale(1.6);
+                -ms-transform: scale(1.6);
+                    transform: scale(1.6); }
+    div.wraper .personalInfo p {
+      text-align: center;
+      margin-top: 1em;
+      margin-bottom: 1em; }

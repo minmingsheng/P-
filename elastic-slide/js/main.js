@@ -25,8 +25,8 @@ function slide(){
 			}
 			console.log(slider.children[0]);
 			console.log(jason);
-			jason.style.background = "blue";
-			elaine.style.background = "red";
+			// jason.style.background = "blue";
+			// elaine.style.background = "red";
 			slider.style.display = "block";
 			// setTimeout(function(){
 			slider.setAttribute("class", "slider is_invisible");

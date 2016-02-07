@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/reset.css">
+<title>Mobile First Media Queries</title>
+<!-- html5.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- css3-mediaqueries.js for IE less than 9 -->
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900italic,900);
+html { 
+	background: #EA002E; 
+	color:snow;
+	font-family: roboto;
+	-webkit-animation: bc 150s alternate infinite linear;
+	-o-animation: bc 150s alternate infinite linear;
+	animation: bc 150s alternate infinite linear;
+}
+@keyframes bc{
+	from{
+		background: #EA002E; 
+	}
+	50%{
+		background: #6CA443;
+	}
+	to{
+		background: #0055A5;
+
+	}
+}
+body{
+	font-size: 1em;
+	padding: 2em;
+}
+h1{
+	font-size:3.4em;
+	margin:1em;
+}
+h5{
+	margin: 1em;
+	margin-left: 0;
+	margin-top: 0
+}
+h3{
+	font-size:1.5em;
+	font-weight: 300;
+
+}
+hr{
+	border-style: solid;
+	border-width: 1px;
+	opacity: 0.4;
+}
+p{
+	font-size: 0.6em;
+	line-height: 1.2em;
+
+}
+li{
+	margin-top: 0.8em;
+}
+.name{
+	font-weight: 600;
+}
+.title{
+	margin-top: 2em;
+	margin-bottom: 0;
+}
+div{
+
+}
+@media (min-width: 400px) {
+  /*html { background: green; }*/
+  body{
+  	font-size: 1.4em;
+  	font-weight: 100;
+  }
+}
+
+@media (min-width: 600px) {
+  html { background: #0055A5; }
+}
+
+@media (min-width: 960px) {
+  html { background: #6CA443; }
+}
+</style>
+</head>
+
+<body>
+<div>
+	<h3 class="name">Jason Sheng</h3>
+	<h5>Graphic Deisgner</h5>
+
+	<p>Creative designer, do the special, never tolerant the mediocre. 
+
+	Perfectionist, very competitive.</p>
+<!-- 	<hr> -->
+<!-- 	<p>Highly believe designers have social responsibility to change the world in a good way and their roles are changing gradually; designers are no longer merely service-provider, more than a collaborator and synthesizer, who can customize client's needs and apply more communication to maximize clients’ benefit. </p>
+	<hr>
+	<p>The importance is the mindset & logic you have, rather than the skill you get.</p>
+	<hr>
+	<p>Love cooking, and photography & design. Designing is a part of life. Cat lover, very knowledgeable about cat breeding, which is as good as my design capacity. </p> -->
+</div>
+
+<div>
+	<h5 class="title">Education</h5>
+	<ul>
+		<li><p><b><i>Sheridan College</i></b> <br>Interactive Media Management</p></li>
+		<li><p><b><i>Nova Scotia College of Art and Design</i> </b><br>Interdisciplinary Design</p></li>
+		<li><p><b><i>Shanghai University</i></b> <br>visual communication</p></li>
+	</ul>
+</div>
+</body>
+</html>
