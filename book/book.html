@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>book	</title>
+</head>
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+	.wraper{
+		width:80vw;
+		height:80vh;
+		border:1px dotted black;
+		margin: 20px auto;
+		position: relative;
+		perspective:3000px;
+
+		
+		/*perspective-origin: 0 center;*/
+
+	}
+	body{
+		font-family: 'Roboto', sans-serif;
+		color:#9e6580;
+		background: gray;
+	}
+	.left{
+		width: 50%;
+		height: 100%;
+		left: 0px;
+		background: url(http://www.tiptheme.com/wp-content/uploads/2015/07/paper-background-5.jpg);
+		background-size: cover;
+		position: absolute;
+		float: left;
+		transform-origin: right center;
+		animation: s 1s 1 ease;
+		backface-visibility:hidden;
+		box-shadow: 1px 1px 11px black;
+
+	}
+	.left img{
+		width: 50%;
+		display: block;
+		margin: auto;
+	}
+	@keyframes s{
+		from{
+			opacity:0;
+			transform: rotateY(180deg);
+		};
+	}
+	.right{
+		width: 50%;
+		height: 100%;
+		right: 0px;
+		background: url(http://www.tiptheme.com/wp-content/uploads/2015/07/paper-background-5.jpg);	
+		position: absolute;
+		background-size: cover;
+		transition:all 1s ease;
+		transform-origin: 0 center;
+		/*transform: rotateY(100deg);*/
+		float: left;
+		animation: ss 1s 1s 1 ease backwards;
+		-webkit-backface-visibility:  hidden;
+		box-shadow: 10px 1px 11px black;
+
+	}
+	@keyframes ss{
+		from{
+			opacity: 0;
+			transform:rotateY(-180deg);
+		}
+	}
+	.right div{
+		width: 80%;
+		margin: auto;
+		
+	}
+	.right div ul{
+		color: #2a2a2a;
+	}
+	
+	li{
+		list-style: none;
+		line-height: 30px;
+	}
+
+	h1{
+		text-align: center;
+		margin-top: 2em;
+		font-weight: 900;
+	}
+</style>
+<body>
+	<div class="wraper">
+		<div class="left">
+			<h1>Jason</h1>
+			<div>
+				<img src="https://lh3.googleusercontent.com/701Sfrly5030kdRnvWK-2HZ2_o1m16MJko21CpkpwA0xHhgAC8ImIf3BG4hbaPOL5M8=w1920-h1080-rw-no" alt="">
+			</div>
+		</div>
+		<div class="right">
+			<div>
+				<h1 >About me</h1>
+				<!-- <article> -->
+					<ul>
+					<li><b>UX/UI Designer | Front-end Developer </b> <br></li>
+					<li>Creative designer, do the special, never tolerant the mediocre. </li>
+					
+					<li>Perfectionist, very competitive.</li>
+					
+					<li>Highly believe designers have social responsibility to change the world in a good way and their roles are changing gradually; designers are no longer merely service-provider, more than a collaborator and synthesizer, who can customize client's needs and apply more communication to maximize clients’ benefit. </li>
+					
+					<li><b>The importance is the mindset & logic you have, rather than the skill you get.</b></li>
+			
+					<li>Love cooking, and photography & design. Designing is a part of life. Cat lover, very knowledgeable about cat breeding, which is as good as my design capacity. </li>
+					</ul>
+					
+				<!-- </article> -->
+			</div>
+		</div>
+	</div>
+</body>
+</html>
