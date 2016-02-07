@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>flip</title>
+</head>
+<style>
+	.wraper{
+		width:30vw;
+		height: 50vh;
+		background: linear-gradient(45deg, #00E7FF, #00FF9C);;
+		position: relative;
+		margin: auto;
+		perspective:1000px;
+	}
+	.g{
+		position: absolute;
+		width: 300px;
+		height: 300px;
+		top:0;right:0;bottom:0;left:0;
+		margin: auto;
+	}
+	@keyframes z{
+		to{
+			transform:rotateY(-360deg);
+		}
+	}
+	.a{
+		/*background: red;*/
+		border:1px solid #008a61;
+		backface-visibility:hidden;
+		opacity: 0;
+		animation: apear 1s 5s 1 forwards,z 10s 5s infinite linear;
+		perspective:2000px;
+
+
+	}
+	.b{
+		/*background: green;*/
+		border:1px solid snow;
+		backface-visibility:hidden;
+		animation:z 10s  infinite linear;
+
+
+	}
+
+	@keyframes apear{
+		to{
+			opacity: 1;
+		}
+	}
+	h1{
+		text-align: center;
+		margin-top: 100px;
+	}
+
+
+	/*style*/
+	.a div{
+		position: relative;
+	}
+	.a div div{
+		width: 100px;
+		height: 100px;
+		/*background: pink;*/
+		position: absolute;
+		top: 0;bottom:0; left:0;right: 0;
+		margin:5px auto;
+	}
+	.b div{
+		position: relative;
+	}
+	.b div div{
+		width: 100px;
+		height: 100px;
+		/*background: pink;*/
+		position: absolute;
+		top: 0;bottom:0; left:0;right: 0;
+		margin:5px auto;
+	}
+	.aa{
+		border:1px solid black;
+		z-index: 1;
+	}
+	.bba{
+		border:1px solid red;
+		z-index: 2;
+
+		
+	}
+	.bbb{
+		border:1px solid green;
+		z-index: 2;
+	}
+	.bb img{
+		width: 100%;
+	} 
+
+</style>
+<body>
+	<div>
+		<div class="wraper">
+			<div class="a g">
+				<div class="clip"><h1>Designer</h1></div>
+				<div>			
+					<div class="aa"></div>
+					<div class="bb bba"><img src="https://lh3.googleusercontent.com/701Sfrly5030kdRnvWK-2HZ2_o1m16MJko21CpkpwA0xHhgAC8ImIf3BG4hbaPOL5M8=w8192-h4608-rw-no" alt=""></div>
+				</div>
+			</div>
+			<div class="b g">
+				<h1>Programmer</h1>
+				<div>			
+					<div class="aa"></div>
+					<div class="bb bbb"><img src="https://lh3.googleusercontent.com/701Sfrly5030kdRnvWK-2HZ2_o1m16MJko21CpkpwA0xHhgAC8ImIf3BG4hbaPOL5M8=w8192-h4608-rw-no" alt=""></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
