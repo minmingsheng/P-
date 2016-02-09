@@ -1,3 +1,17 @@
+<?php 
+	try{
+	include("database.php");
+	$sql = "SELECT * FROM `skills`";
+	$result = $db->query($sql);
+	$skills = $result->fetchAll(PDO::FETCH_ASSOC);
+	// echo "Done!"
+	;}
+	catch(PDOException $e)
+	{
+	echo "Error: " . $e->getMessage();
+	}     
+
+ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -6,11 +20,12 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="js/main.js"></script>
 	<body>
 		<div class="container">
 			<div class="wraper">
 				<div class='title pagewidth'>
-					<h1>MINMING SHENG</h1>
+					<h1><a href="add.php">MINMING SHENG</a></h1>
 					<h2>Interdisciplinary Designer</h2>
 					<p>Based on Toronto</p>
 				</div>
@@ -48,139 +63,24 @@
 					<div class="contentWraper">
 						<div class="skillList">
 							<ul>
+							<?php foreach($skills as $key => $values): ?>
+						
 								<li>
-									<ul class="skillSet">
-										<li><b>Photoshop</b></li>
+									<ul class="skillSet" data-id="<?php echo $skills[$key]["id"] ?>">
+										<li><b><?php echo $skills[$key]["name"] ;?></b></li>
 										<li>
-											<div class="skillBar"><div></div></div>
+											<div class="skillBar" ><div style="width:<?php echo $skills[$key]["level"] ?>%"></div></div>
 										</li>
-										<li><b>lv.89</b></li>
+										<li><b>lv.	<?php echo $skills[$key]["level"] ;?></b></li>
 									</ul>
 								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>Illustrator</b></li>
-										<li>
-											<div class="skillBar">
-												<div></div>
-											</div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>Illustrator</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li> 
-									<ul class="skillSet">
-										<li><b>3dMax</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>HTML 5</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>							
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>CSS</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>Javascript</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>PHP</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li> 
-									<ul class="skillSet">
-										<li><b>SQL</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>Angular.Js</b> </li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>Node.Js</b> </li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>JQuery.Js </b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li> 
-									<ul class="skillSet">
-										<li><b>Python</b></li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								<li>
-									<ul class="skillSet">
-										<li><b>Command Line</b> </li>
-										<li>
-											<div class="skillBar"><div></div></div>
-										</li>
-										<li><b>lv.89</b></li>
-									</ul>
-								</li>
-								
+							<?php endforeach ?>
+							
 							</ul>
 						</div>
 						<div class="skillInfo">
-							<div class="infoFeed"></div>
+							<div class="infoFeed">
+							</div>
 						</div>
 					</div>
 				</div>
