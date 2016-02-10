@@ -17,6 +17,8 @@
 	<head>
 		<title>resume</title>
 	</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -53,7 +55,7 @@
 								<p><b>BACHELOR DEGREE OF ARTS SEP 2010 - JUN 2014</b> <br> Shanghai University</p>
 							</div>
 							<div>
-								<p><b>Web Design</b></p>
+								<p><b>Visual Communication</b></p>
 							</div>
 						</div>
 					</div>
