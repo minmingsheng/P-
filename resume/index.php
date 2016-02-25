@@ -73,10 +73,16 @@
 	<script type="text/javascript" src="js/main.js"></script>
 	<body>
 		<div class="gray"></div>
+		<div class="showDesx">
+			<section>
+				<span>x</span>
+				<div></div>
+			</section>
+		</div>
 		<div class="showDes">
 			<section>
 				<span>x</span>
-				<b>asdas</b>
+				<p><b>asdas</b></p>
 				<div></div>
 <!-- 			<div>asdads</div>
 				<div>asdads</div>
@@ -85,9 +91,11 @@
 			</section>
 		</div>
 		<div class="container">
+			<div class='toggle'><i class="fa fa-caret-up trigger"></i></div>
+			<div class='top-toggle'><i class="fa fa-caret-up trigger"></i></div>
 			<div class="wraper">
 				<div class='title pagewidth'>
-					<h1><a href="add.php">MINMING SHENG</a></h1>
+					<h1><a href="https://jasonshengblog.wordpress.com/">MINMING SHENG</a></h1>
 					<h2>Interdisciplinary Designer</h2>
 					<p>Based in Toronto</p>
 				</div>
@@ -96,7 +104,7 @@
 					<div class= "edus">
 						<div class="edu">
 							<div>
-								<p><b>POST Graducate Certificate (SEP 2015 - APR 2016) </b><br> Sheridan College</p>
+								<p><b>POST Graducate Certificate <br/>(SEP 2015 - APR 2016) </b><br> Sheridan College, Oakville</p>
 							</div>
 							<div>
 								<p><b>Interactive Multimedia</b></p>
@@ -104,7 +112,7 @@
 						</div>
 						<div class="edu">
 							<div>
-								<p><b>POST-Baccalaureate Certificate (SEP 2014 - APR 2015)</b> <br> NSCAD University </p>
+								<p><b>POST-Baccalaureate Certificate <br/>(SEP 2014 - APR 2015)</b> <br> NSCAD University, Halifax </p>
 							</div>
 							<div>
 								<p><b>Interdisciplinary Design</b></p>
@@ -112,7 +120,7 @@
 						</div>
 						<div class="edu">
 							<div>
-								<p><b>BACHELOR DEGREE OF ARTS (SEP 2010 - JUN 2014)</b> <br> Shanghai University</p>
+								<p><b>BACHELOR DEGREE OF ARTS <br/>(SEP 2010 - JUN 2014)</b> <br> Shanghai University, Shanghai, China</p>
 							</div>
 							<div>
 								<p><b>Visual Communication</b></p>
@@ -147,16 +155,16 @@
 									<b>Applying: </b>Junior front-end developer or junior ux/ui designer. $24-$30 / hour is my wish. 
 								</div>
 								<div class="intro" >
-									<b>Background: </b>I have a graphic designer background with a little 3D, drawing & photography.
+									<b>Background: </b>I have graphic-design background with a little bit 3D, drawing, photography, design thinking skill. Just one year graphic design work experience in Shanghai, China.
 								</div>
 								<div class="intro" >
 									<b>Current year: </b>I use one year to learning front-end and back-end development as well as ux/ui design.
 								</div>
 								<div class="intro" >
-									<b>Feeling: </b>I know there are a lot still need to learn but I learn fast. 
+									<b>Feeling: </b>I know there are a lot still need to learn but I learn fast and I am eager to know more. I think the importance is not the skill, but mindset.
 								</div>
 								<div class="intro" >
-									<b>Thought: </b>Everything could be fake, but the hand would not, if having a chance to get an interview, I will take my keyboard
+									<b>Thought: </b>Everything could be fake, but the hands don't, if having a chance to get an interview, I will take my keyboard
 									to show what I can do.
 								</div>
 							</div>
@@ -167,7 +175,7 @@
 					<div class="banner changColor"><h2>Work Experience</h2></div>
 					<div>
 						<p><b> 2013 - 2014	Herun Group Shanghai Development Co., Ltd.  Shanghai</b><br><br>Graphic Designer</p>
-						<p>Took an internship as Graphic Designer to assist in website designing and leaflet designing .</p>
+						<p>Took an internship as Graphic Designer to assist in website design and leaflet design.</p>
 					</div>
 				</div>
 				<div class="personalInfo pagewidth">
@@ -175,11 +183,11 @@
 						<ul>
 							<li><a href="https://github.com/minmingsheng"><i class="fa fa-github-square"></i></a></li>
 							<li><a href="https://www.linkedin.com/in/minming-sheng-9b1746b2"><i class="fa fa-linkedin-square"></a></i></li>
-							<li><a href="#"><i class="fa fa-sign-in"></i></a></li>
+							<li><a href="http://minmingsheng.design"><i class="fa fa-sign-in"></i></a></li>
 						</ul>
 					</div>
 					<p><b>1297 Malborough Crt, Oakville, ON</b></p>
-					<p><a href="">(902) -293-8037</a>      <a href="">minming.ca@gmail.com</a></p>
+					<p><a href="tel:902-293-8037">(902)-293-8037</a>      <a href="mailto: minming.ca@gmail.com">minming.ca@gmail.com</a></p>
 				</div>
 			</div>
 		</div>

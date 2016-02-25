@@ -3,7 +3,12 @@ window.addEventListener("load", function(){
 
 	document.querySelector(".container").style.width = window.innerWidth+'px';
 
-
+	var changeP;
+	if(window.innerWidth >757){
+		changeP = false;
+	}else{
+		changeP = true;
+	}
 	var descriptions;
 	var skillSet = document.querySelectorAll(".skillSet");
 	var infoFeed = document.querySelector(".infoFeed");
@@ -36,9 +41,9 @@ window.addEventListener("load", function(){
 	     				infoFeed.appendChild(el);
 	     			}else{
 	     				var showDes = document.querySelector(".showDes");
-	     				document.querySelector(".showDes section b").textContent = title;
-	     				el.textContent ="> "+req[i].description;
 	     				showDes.style.display = "block";
+	     				document.querySelector(".showDes section p").textContent = title;
+	     				el.textContent ="> "+req[i].description;
 	     				document.querySelector(".gray").style.display = 'block';
 	     				document.querySelector(".showDes section div").appendChild(el);
 
@@ -60,9 +65,10 @@ window.addEventListener("load", function(){
 				this.children[1].querySelector(".skillBar div").setAttribute("class", "clicked");
 				
 
-
 				console.info(this.children[0].textContent);
 				var title = this.children[0].textContent;
+	     		// document.querySelector(".showDes section p").textContent = title;
+	     		console.log(document.querySelector(".showDes section p"));
 				infoFeed.innerHTML   = "";
 				var skillTitle = document.createElement("h5");
 				skillTitle.textContent = title;
@@ -74,7 +80,10 @@ window.addEventListener("load", function(){
 				infoFeed.appendChild(skillTitle);
 				dataId = this.getAttribute("data-id");
 				console.log(dataId);//for test
+
+
 				loadDoc(dataId, title);
+
 			})
 		};
 	}
@@ -99,6 +108,13 @@ window.addEventListener("load", function(){
 				fixizeBannaer();
 				
 			}
+			if(window.innerWidth<800){
+				changeP = true;
+			}else{
+				changeP = false;
+
+			}
+			console.log(changeP);
 		})
 	}
 	function fixizeBannaer(){
@@ -252,12 +268,90 @@ window.addEventListener("load", function(){
 
 		});
 	}
+	function toggle(){
+
+
+		var toggle = document.querySelector(".trigger");
+		var intros = document.querySelector(".infoFeed").querySelectorAll('.intro');
+		var divs = document.querySelector(".infoFeed").querySelectorAll('div');
+		console.log(infoFeed);
+		var b = false;
+		toggle.addEventListener("click", function(){
+			console.log(intros);
+			if(!changeP){
+				if(b){
+					/*appear*/
+					infoFeed.innerHTML = "";
+					for (var i = 0; i < intros.length; i++) {
+						// intros[i].style.display = "none";
+						infoFeed.appendChild(intros[i]);
+					};
+					b = false;
+					
+				}else{
+					/*disappear*/
+						
+
+					for (var i = 0; i < divs.length; i++) {
+						infoFeed.innerHTML = "";
+					};
+					b = true;
+				}
+			}
+			// alert("asd");
+		})
+	}
+	function showD(){
+		var top_toggle = document.querySelector('.top-toggle');
+		var intros = document.querySelectorAll('.intro');
+		var b = true;
+		top_toggle.addEventListener("click", function(){
+		var el = document.createElement("div");
+		el.setAttribute("class", "window")
+			var icon = top_toggle.querySelector("i");
+			console.log(icon);
+		console.log(intros);
+			if(b){
+				el.style.position = "absolute";
+				el.style.top = 0;
+				el.style.width = "100%";
+				el.style.height = "100%";
+				// el.style.zIndex = "1000";
+				el.style.background = "#a1dfda";
+				for (var i = 0; i < intros.length; i++) {
+					el.appendChild(intros[i]);
+				};
+				
+				icon.setAttribute("class", "fa fa-times trigger");
+				// top_toggle.style.background  = "transparent";
+				document.body.appendChild(el);	
+				b = false;
+			}else{
+				console.log(el);
+				icon.setAttribute("class", "fa fa-caret-up trigger");
+				// top_toggle.style.background  = "#a1dfda";
+
+				document.body.removeChild(document.querySelector(".window"));	;
+				b=true;
+			}
+			
+
+		})
+		
+	}
+
+
+	showD();
+	toggle();
+	
+
+
 	scrollIt();
 
 
 	resize();
 	getDataId();
-	audio();
+	// audio();
 	cross()
 
 	
