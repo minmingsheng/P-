@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900);
-
+$opacittColor: rgba(161, 223, 218, 0.3);
 $mainColor : #a1dfda;
 $hoverBg:linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(161,223,218,1) 100%);
 $sColor:#818387;
@@ -283,16 +283,19 @@ div.wraper{
 				flex-flow:row wrap;
 				justify-content: space-around;
 				border-bottom: 1px dotted $black;
-
+				padding: 0.5em;
+				padding-left: 10px;
 				p{
-					margin: 1em;
+					b{
+						/*font-family: Lato;*/
+						font-weight: 900;
+					}
+					margin: 0em;
 					line-height: 2em;
 					margin-left: 2em;
 				}
 				div:first-child{
-
 					width:60%;
-					height: 100%;
 					/*background: yellow;*/
 				}
 				div:last-child{
@@ -300,7 +303,9 @@ div.wraper{
 					width: 40%;
 					/*background: orange;*/
 					text-align: right;
-
+					p{
+						margin-right: 1em;
+					}
 				}
 
 				
@@ -696,11 +701,17 @@ div.wraper{
 				.edu{
 					flex-direction:column ;
 					width: 100%;
+					padding-left:0;
+					padding-right:0;
+					padding-bottom:0;
 					div:first-child{
 						width: auto;
 						text-align: left  ;
 					}
-					div:last-child{		
+					div:last-child{	
+						
+						font-weight:400;
+						background: $opacittColor;
 						width: auto;
 						text-align: left  ;
 					}
@@ -725,7 +736,8 @@ div.wraper{
 	position: absolute;
 	z-index: 100;
 	display: none;
-	opacity: 0.5;
+	opacity: 0.9;
+	filter: blur(10px);
 	animation: showup 400ms 1 ease;
 }
 @keyframes flash{
@@ -758,12 +770,16 @@ div.wraper{
 	-moz-overflow-scrolling: touch;	
 	-o-overflow-scrolling: touch;	
 	-ms-overflow-scrolling: touch;	
-
 	section{
+		>p{
+			margin-top:2em;
+		}
 		span{
 			display: block;
 			text-align: right;
 			padding-right:1em;
+			position:fixed;
+			right:0.5em;
 			cursor: pointer;
 			transition:all 400ms ease;
 			&:hover{
@@ -771,13 +787,17 @@ div.wraper{
 			}
 		}
 		width: 100%;
-		height:100%;
+		height:400px;
 		background: $mainColor;	
 		margin:100px auto;
+		margin-bottom:0;
 		border:1px solid $black;
 		text-align: center;
 		font-weight: 800;
 		line-height: 2em;
+		
+		overflow:scroll;
+		overflow-scrolling:touch;
 		div{
 			font-weight: 300;
 			overflow: scroll;
@@ -788,6 +808,7 @@ div.wraper{
 			padding:1em;
 			margin-bottom: 0.5em;
 			margin: auto;
+
 		}
 	}
 }

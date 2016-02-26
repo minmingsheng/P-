@@ -288,19 +288,25 @@ div.wraper {
         -webkit-justify-content: space-around;
             -ms-flex-pack: distribute;
                 justify-content: space-around;
-        border-bottom: 1px dotted #1e1a1b; }
+        border-bottom: 1px dotted #1e1a1b;
+        padding: 0.5em;
+        padding-left: 10px; }
         div.wraper .education .edus .edu p {
-          margin: 1em;
+          margin: 0em;
           line-height: 2em;
           margin-left: 2em; }
+          div.wraper .education .edus .edu p b {
+            /*font-family: Lato;*/
+            font-weight: 900; }
         div.wraper .education .edus .edu div:first-child {
-          width: 60%;
-          height: 100%
+          width: 60%
           /*background: yellow;*/ }
         div.wraper .education .edus .edu div:last-child {
           width: 40%;
           /*background: orange;*/
           text-align: right; }
+          div.wraper .education .edus .edu div:last-child p {
+            margin-right: 1em; }
   div.wraper .personalSkill {
     min-height: 40em;
     /*background:tomato;*/
@@ -630,11 +636,16 @@ div.wraper {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 100%; }
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0; }
     div.wraper .education .edus .edu div:first-child {
       width: auto;
       text-align: left; }
     div.wraper .education .edus .edu div:last-child {
+      font-weight: 400;
+      background: rgba(161, 223, 218, 0.3);
       width: auto;
       text-align: left; } }
 .pause {
@@ -653,7 +664,9 @@ div.wraper {
   position: absolute;
   z-index: 100;
   display: none;
-  opacity: 0.5;
+  opacity: 0.9;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
   -webkit-animation: showup 400ms 1 ease;
           animation: showup 400ms 1 ease; }
 
@@ -689,17 +702,24 @@ div.wraper {
   -ms-overflow-scrolling: touch; }
   .showDes section {
     width: 100%;
-    height: 100%;
+    height: 400px;
     background: #a1dfda;
     margin: 100px auto;
+    margin-bottom: 0;
     border: 1px solid #1e1a1b;
     text-align: center;
     font-weight: 800;
-    line-height: 2em; }
+    line-height: 2em;
+    overflow: scroll;
+    overflow-scrolling: touch; }
+    .showDes section > p {
+      margin-top: 2em; }
     .showDes section span {
       display: block;
       text-align: right;
       padding-right: 1em;
+      position: fixed;
+      right: 0.5em;
       cursor: pointer;
       -webkit-transition: all 400ms ease;
               transition: all 400ms ease; }

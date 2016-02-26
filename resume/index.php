@@ -104,26 +104,26 @@
 					<div class= "edus">
 						<div class="edu">
 							<div>
-								<p><b>POST Graducate Certificate <br/>(SEP 2015 - APR 2016) </b><br> Sheridan College, Oakville</p>
+								<p><b>Interactive Multimedia</b></p> <p>SEP 2015 - APR 2016</p>  <p>Sheridan College, Oakville</p>
 							</div>
 							<div>
-								<p><b>Interactive Multimedia</b></p>
-							</div>
-						</div>
-						<div class="edu">
-							<div>
-								<p><b>POST-Baccalaureate Certificate <br/>(SEP 2014 - APR 2015)</b> <br> NSCAD University, Halifax </p>
-							</div>
-							<div>
-								<p><b>Interdisciplinary Design</b></p>
+								<p><b>Post-Graducate Certificate</b></p>
 							</div>
 						</div>
 						<div class="edu">
 							<div>
-								<p><b>BACHELOR DEGREE OF ARTS <br/>(SEP 2010 - JUN 2014)</b> <br> Shanghai University, Shanghai, China</p>
+								<p><b>Interdisciplinary Design </b></p> <p>SEP 2014 - APR 2015</p> <p>NSCAD University, Halifax </p>
 							</div>
 							<div>
-								<p><b>Visual Communication</b></p>
+								<p><b>Post-Baccalaureate Certificate</b></p>
+							</div>
+						</div>
+						<div class="edu">
+							<div>
+								<p><b>Visual Communication</b></p> <p>SEP 2010 - JUN 2014</p> <p>Shanghai University, Shanghai, China</p>
+							</div>
+							<div>
+								<p><b> Bachelor degree of arts</b></p>
 							</div>
 						</div>
 					</div>
