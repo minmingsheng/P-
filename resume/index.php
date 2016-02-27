@@ -70,8 +70,14 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script type="text/javascript" src="js/isMobile.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<body>
+	<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->
+		<div id = "audioBtn">
+			<div><img id = "play" src="img/open.svg" alt="open.svg"></div>
+			<div><img id = "mute" src="img/mute.svg" alt="mute.svg"></div>
+		</div>
 		<div class="gray"></div>
 		<div class="showDesx">
 			<section>
@@ -81,7 +87,7 @@
 		</div>
 		<div class="showDes">
 			<section>
-				<span>x</span>
+				<span><i class="fa fa-times"></i></span>
 				<p><b>asdas</b></p>
 				<div></div>
 <!-- 			<div>asdads</div>
@@ -139,7 +145,7 @@
 									<ul class="skillSet" data-id="<?php echo $skills[$key]["id"] ?>">
 										<li><b><?php echo $skills[$key]["name"] ;?></b></li>
 										<li>
-											<div class="skillBar" ><div style="width:<?php echo $skills[$key]["level"] ?>%"></div></div>
+											<div class="skillBar" ><div style="width:<?php echo $skills[$key]["level"] ?>%"><section class="finger" ><img src="img/finger.svg" alt=""></section></div></div>
 										</li>
 										<li><b>lv.	<?php echo $skills[$key]["level"] ;?></b></li>
 									</ul>

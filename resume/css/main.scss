@@ -22,6 +22,46 @@ body{
 	    display: none; 
 	}
 }
+#audioBtn{
+	width:150px;
+	height: 80px;
+	background: $mainColor;
+	border:1px solid $black;
+	box-shadow: 1px 1px 11px rgba(0,0,0,0.4);
+	position: absolute;
+	z-index: 10000;
+	top:0;bottom: 0;
+	left:0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	padding: 0;
+
+	animation: showup 2s 600ms ease backwards;
+	div{
+		/*margin: 1em;*/
+		flex:1;
+		/*background:blue;*/
+		/*width: 100%;*/
+		border:1px solid $black;
+		
+		display: flex;
+
+		img{
+			opacity: 0.5;
+			width: 60%;
+			display: block;
+			margin: auto;
+			transition:transform 100ms ease-in-out,opacity 1s ease ;
+			&:hover{
+				opacity:1;
+				cursor:pointer;
+				transform: scale(1.1);
+			}
+		}
+
+	}
+}
 .intro{
 	display: none;
 	
@@ -173,7 +213,7 @@ background-color: #C2D2E4;
 	 	transition:all 300ms ease;
 	 	i{
 	 		line-height: 50px;
-	 		margin-left: 10px;
+	 		margin-right: 1em;
 	 		color: $black;
 	 		text-align: center;
 	 		transition:all 1s ease;
@@ -189,13 +229,13 @@ background-color: #C2D2E4;
 	 		}
 	 		&:hover{
 	 			cursor: pointer;
-	 			color:snow;
+	 			color:$sColor;
 	 		};
 	 	}
-	 	&:hover{
+	 /*	&:hover{
 	 		transform:translateX(5px);
 
-	 	};
+	 	};*/
 	 }
 	 .toggle{
 	 	width: 30px;
@@ -257,8 +297,9 @@ div.wraper{
 		background: $mainColor;
 		/*font-family: "Lato";*/
 		/*font-weight: 300;*/
+		/*z-index: -1000;*/
 		box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.4);
-		transition:all 500ms ease;
+		/*transition:all 500ms ease;*/
 		h2{
 			font-weight:700; 
 			line-height: 30px;
@@ -383,6 +424,17 @@ div.wraper{
 							position: absolute;
 							transition:all 900ms ease;
 							animation: increase 1s 1 ease;
+							section{
+								position: relative;
+								width: 30px;
+								height: 30px;
+								/*background: red;*/
+								img{
+									width: 100%;
+									margin-left: 1em;
+									animation: showup 1s infinite alternate ease;
+								}
+							}
 							&:hover{
 								background: $hoverBg;
 								/*background-size:100%;*/
@@ -680,6 +732,56 @@ div.wraper{
 	}
 	
 }
+@media (max-width: 800px){
+	body{
+		/*background: green;*/
+	}
+	.skillInfo{
+		.infoFeed{
+			height: 750px !important;
+		}
+	}
+	.skillList{
+		margin-bottom: 1em;
+		>ul>li{
+			margin:0;
+			display: inline;
+			/*background: orange;*/
+			z-index: 100;
+			
+		}
+		/*background: green;*/
+		.skillSet{
+			
+			
+			margin-left: 0;
+			display: block;
+			margin:auto;
+			/*width: 300px;*/
+			/*background: yellow;*/
+			width: 100%;
+			float: left;
+			height: auto;
+			padding: 1px;
+			li:first-child{
+				width: 10%;
+				/*background: blue;*/
+				text-align: left;
+			}
+			li:last-child{
+				width: 100px;
+				text-align: left;
+			}
+
+			li{
+				/*padding:20px;*/
+				/*background: red;*/
+				width:11px;
+
+			}
+		}
+	}
+}
 @media (max-width: 400px){
 	body{
 		/*background: green;*/
@@ -823,6 +925,10 @@ div.wraper{
 		background: #ecd2d5;
 	}*/
 }
+.noanimation{
+	animation: no 1s 1 ease !important;
+}
+
 @keyframes page{
 	from{
 		/*transform:center 0;*/

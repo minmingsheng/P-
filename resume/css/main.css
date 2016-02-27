@@ -13,6 +13,53 @@ body {
   body ::-ms-scrollbar {
     display: none; }
 
+#audioBtn {
+  width: 150px;
+  height: 80px;
+  background: #a1dfda;
+  border: 1px solid #1e1a1b;
+  box-shadow: 1px 1px 11px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  -webkit-animation: showup 2s 600ms ease backwards;
+          animation: showup 2s 600ms ease backwards; }
+  #audioBtn div {
+    /*margin: 1em;*/
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    /*background:blue;*/
+    /*width: 100%;*/
+    border: 1px solid #1e1a1b;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    #audioBtn div img {
+      opacity: 0.5;
+      width: 60%;
+      display: block;
+      margin: auto;
+      -webkit-transition: -webkit-transform 100ms ease-in-out, opacity 1s ease;
+              transition: transform 100ms ease-in-out, opacity 1s ease; }
+      #audioBtn div img:hover {
+        opacity: 1;
+        cursor: pointer;
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1); }
+
 .intro {
   display: none;
   border: none;
@@ -160,10 +207,14 @@ a {
     bottom: 0;
     z-index: 1000;
     -webkit-transition: all 300ms ease;
-            transition: all 300ms ease; }
+            transition: all 300ms ease
+    	 /*	&:hover{
+    	 		transform:translateX(5px);
+    
+    	 	};*/ }
     .container .top-toggle i {
       line-height: 50px;
-      margin-left: 10px;
+      margin-right: 1em;
       color: #1e1a1b;
       text-align: center;
       -webkit-transition: all 1s ease;
@@ -187,11 +238,7 @@ a {
             transform: rotate(90deg); } }
       .container .top-toggle i:hover {
         cursor: pointer;
-        color: snow; }
-    .container .top-toggle:hover {
-      -webkit-transform: translateX(5px);
-          -ms-transform: translateX(5px);
-              transform: translateX(5px); }
+        color: #818387; }
   .container .toggle {
     width: 30px;
     -webkit-transform: translateX(20px);
@@ -254,9 +301,9 @@ div.wraper {
     background: #a1dfda;
     /*font-family: "Lato";*/
     /*font-weight: 300;*/
-    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.4);
-    -webkit-transition: all 500ms ease;
-            transition: all 500ms ease; }
+    /*z-index: -1000;*/
+    box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.4)
+    /*transition:all 500ms ease;*/ }
     div.wraper .banner h2 {
       font-weight: 700;
       line-height: 30px; }
@@ -360,6 +407,16 @@ div.wraper {
                   transition: all 900ms ease;
           -webkit-animation: increase 1s 1 ease;
                   animation: increase 1s 1 ease; }
+          div.wraper .personalSkill .contentWraper .skillSet .skillBar div section {
+            position: relative;
+            width: 30px;
+            height: 30px
+            /*background: red;*/ }
+            div.wraper .personalSkill .contentWraper .skillSet .skillBar div section img {
+              width: 100%;
+              margin-left: 1em;
+              -webkit-animation: showup 1s infinite alternate ease;
+                      animation: showup 1s infinite alternate ease; }
           div.wraper .personalSkill .contentWraper .skillSet .skillBar div:hover {
             background: -webkit-linear-gradient(left, #f85032 0%, #a1dfda 100%);
             background: linear-gradient(to right, #f85032 0%, #a1dfda 100%)
@@ -617,6 +674,42 @@ div.wraper {
       -webkit-transform: translateY(-15px);
           -ms-transform: translateY(-15px);
               transform: translateY(-15px); } }
+@media (max-width: 800px) {
+  body {
+    /*background: green;*/ }
+
+  .skillInfo .infoFeed {
+    height: 750px !important; }
+
+  .skillList {
+    margin-bottom: 1em
+    /*background: green;*/ }
+    .skillList > ul > li {
+      margin: 0;
+      display: inline;
+      /*background: orange;*/
+      z-index: 100; }
+    .skillList .skillSet {
+      margin-left: 0;
+      display: block;
+      margin: auto;
+      /*width: 300px;*/
+      /*background: yellow;*/
+      width: 100%;
+      float: left;
+      height: auto;
+      padding: 1px; }
+      .skillList .skillSet li:first-child {
+        width: 10%;
+        /*background: blue;*/
+        text-align: left; }
+      .skillList .skillSet li:last-child {
+        width: 100px;
+        text-align: left; }
+      .skillList .skillSet li {
+        /*padding:20px;*/
+        /*background: red;*/
+        width: 11px; } }
 @media (max-width: 400px) {
   body {
     /*background: green;*/ }
@@ -757,6 +850,10 @@ div.wraper {
   	80%{
   		background: #ecd2d5;
   	}*/ }
+.noanimation {
+  -webkit-animation: no 1s 1 ease !important;
+          animation: no 1s 1 ease !important; }
+
 @-webkit-keyframes page {
   from {
     /*transform:center 0;*/
@@ -764,6 +861,7 @@ div.wraper {
     box-shadow: 1px 1px 11px #1e1a1b;
     -webkit-transform: rotateX(3deg);
             transform: rotateX(3deg); } }
+
 @keyframes page {
   from {
     /*transform:center 0;*/
